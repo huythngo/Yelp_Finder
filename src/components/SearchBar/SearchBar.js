@@ -38,6 +38,7 @@ class SearchBar extends React.Component {
       this.state.location,
       this.state.sortBy
     );
+
     e.preventDefault();
   }
   renderSortByOptions() {
@@ -63,10 +64,15 @@ class SearchBar extends React.Component {
         </div>
         <div className='SearchBar-fields'>
           <input
+            id='business-input'
             onChange={this.handleTermChange}
             placeholder='Search Businesses'
           />
-          <input onChange={this.handleLocationChange} placeholder='Where?' />
+          <input
+            id='location-input'
+            onChange={this.handleLocationChange}
+            placeholder='Where?'
+          />
         </div>
         <div className='SearchBar-submit' onClick={this.handleSearch}>
           <a>Let's Go</a>

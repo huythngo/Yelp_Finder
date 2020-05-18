@@ -35,6 +35,7 @@ const Yelp = {
             isClosed: business.is_closed,
           }));
         }
+        return [];
       });
   },
 };
