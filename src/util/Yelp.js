@@ -13,7 +13,7 @@ const Yelp = {
           if (response.ok) {
             return response.json();
           }
-          alert("Request failed!");
+          return {};
         },
         (error) => console.log(error.message)
       )
