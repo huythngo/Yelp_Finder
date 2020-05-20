@@ -12,34 +12,8 @@ class SearchBar extends React.Component {
       term: "",
       location: "",
       sortBy: "best_match",
-      businessSuggestions: [
-        {
-          name: "abc",
-          id: "1",
-        },
-        {
-          name: "bcd",
-          id: "2",
-        },
-        {
-          name: "cde",
-          id: "3",
-        },
-      ],
-      locationSuggestions: [
-        // {
-        //   name: "abc",
-        //   id: "1",
-        // },
-        // {
-        //   name: "bcd",
-        //   id: "2",
-        // },
-        // {
-        //   name: "cde",
-        //   id: "3",
-        // },
-      ],
+      businessSuggestions: [],
+      locationSuggestions: [],
     };
     this.handlePlaceSelect = this.handlePlaceSelect.bind(this);
 
