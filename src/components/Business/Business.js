@@ -19,7 +19,10 @@ class Business extends React.Component {
               {this.props.business.state} {this.props.business.zipCode}
             </p>
             <p>
-              <a href={`https://www.yelp.com/map/${this.props.business.alias}`}>
+              <a
+                href={`https://www.yelp.com/map/${this.props.business.alias}`}
+                target='_blank'
+              >
                 View Direction
               </a>
             </p>

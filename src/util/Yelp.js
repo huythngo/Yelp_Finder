@@ -38,6 +38,35 @@ const Yelp = {
         return [];
       });
   },
+
+  searchSuggestion(text) {
+    return fetch(
+      `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/autocomplete?text=${text}`,
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.REACT_APP_YELP_API_KEY}`,
+        },
+      }
+    )
+      .then(
+        (response) => {
+          if (response.ok) {
+            return response.json();
+          }
+          return {};
+        },
+        (error) => console.log(error.message)
+      )
+      .then((jsonResponse) => {
+        if (jsonResponse.terms) {
+          return jsonResponse.terms.map((term, index) => ({
+            id: index,
+            name: term.text,
+          }));
+        }
+        return [];
+      });
+  },
 };
 
 export default Yelp;

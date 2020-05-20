@@ -1,0 +1,11 @@
+.Suggestions input {
+  border-radius: 0;
+}
+.Suggestions input:last-child {
+  border-radius: 0 0 4px 4px;
+}
+.Suggestions input:hover {
+  background-color: #c4c1b7;
+  font-weight: bold;
+  cursor: pointer;
+}
